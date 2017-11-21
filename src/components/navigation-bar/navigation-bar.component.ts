@@ -14,7 +14,7 @@ export class NavigationBarComponent {
 
   // Account property.
   @Input('profile')
-  private account: ProfileViewModel;
+  private profile: ProfileViewModel;
 
   //#endregion
 

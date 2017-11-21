@@ -17,6 +17,11 @@ export class ProfileViewModel{
   * */
   public joinedTime: number;
 
+  /*
+  * Email of account.
+  * */
+  public email: string;
+
   //#endregion
 
 }
