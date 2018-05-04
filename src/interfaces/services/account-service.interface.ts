@@ -1,4 +1,4 @@
-import {Response} from '@angular/http';
+import {ProfileViewModel} from "../../view-models/profile.view-model";
 
 export interface IAccountService {
 
@@ -7,7 +7,7 @@ export interface IAccountService {
   /*
   * Get profile information.
   * */
-  getProfile(): Promise<Response>;
+  getProfile(): Promise<ProfileViewModel>;
 
   //#endregion
 

@@ -4,8 +4,6 @@ import {AppComponent} from './app.component';
 import {IsAuthorizedGuard} from "../guards/is-authorized-guard";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ToastrModule} from "ngx-toastr";
-import {Http, HttpModule} from "@angular/http";
-import {GlobalHttpInterceptor} from "../interceptors/global-http-interceptor";
 import {FormsModule} from "@angular/forms";
 import {ProfileResolve} from "../resolvers/profile.resolve";
 import {MomentModule} from "angular2-moment";
@@ -24,7 +22,6 @@ import {AccountService} from "../services/account.service";
   imports: [
     FormsModule,
     BrowserModule,
-    HttpModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
     MomentModule,
@@ -37,7 +34,6 @@ import {AccountService} from "../services/account.service";
     IsAuthorizedGuard,
     AppSettings,
     // Handle common behaviour of http request / response.
-    {provide: Http, useClass: GlobalHttpInterceptor},
     {provide: 'IAccountService', useClass: AccountService},
     {provide: 'IAuthenticationService', useClass: AuthenticationService},
 

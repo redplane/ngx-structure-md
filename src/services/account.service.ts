@@ -1,6 +1,7 @@
 import {IAccountService} from "../interfaces/services/account-service.interface";
-import {Http, Response} from "@angular/http";
 import {Injectable} from "@angular/core";
+import {HttpClient} from "@angular/common/http";
+import {ProfileViewModel} from "../view-models/profile.view-model";
 
 @Injectable()
 export class AccountService implements IAccountService{
@@ -10,7 +11,7 @@ export class AccountService implements IAccountService{
   /*
   * Initiate service with injectors.
   * */
-  public constructor(private http: Http){
+  public constructor(private http: HttpClient){
 
   }
 
@@ -21,7 +22,7 @@ export class AccountService implements IAccountService{
   /*
   * Get profile information.
   * */
-  public getProfile(): Promise<Response> {
+  public getProfile(): Promise<ProfileViewModel> {
     let url = '/assets/user.json';
     return this.http.get(url).toPromise();
   }

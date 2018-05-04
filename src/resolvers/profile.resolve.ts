@@ -1,9 +1,8 @@
 import {Inject, Injectable} from "@angular/core";
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/router";
-import {Observable} from "rxjs/Observable";
-import {Response} from '@angular/http';
 import {IAccountService} from "../interfaces/services/account-service.interface";
 import {ProfileViewModel} from "../view-models/profile.view-model";
+import {Observable} from "rxjs/index";
 
 @Injectable()
 export class ProfileResolve implements Resolve<Account> {
@@ -23,10 +22,8 @@ export class ProfileResolve implements Resolve<Account> {
   /*
   * Resolve service value.
   * */
-  public resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Account | Observable<Account> | Promise<Account> {
-    return this.accountService.getProfile().then((x: Response) => {
-      return <ProfileViewModel> x.json();
-    });
+  public resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): ProfileViewModel | Observable<ProfileViewModel> | Promise<ProfileViewModel> {
+    return this.accountService.getProfile();
   }
 
 //#endregion
