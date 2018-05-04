@@ -30,7 +30,7 @@ export class AccountService implements IAccountService {
       profile.email = 'Email 01';
       profile.joinedTime = 0;
       profile.nickname = 'Nick name 01';
-      profile.photoRelativeUrl = 'abc';
+      profile.photoRelativeUrl = 'https://upload.wikimedia.org/wikipedia/commons/f/f4/User_Avatar_2.png';
       observer.next(profile);
     });
     //
