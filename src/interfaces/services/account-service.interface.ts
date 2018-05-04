@@ -1,4 +1,5 @@
 import {ProfileViewModel} from "../../view-models/profile.view-model";
+import {Observable} from "rxjs/Observable";
 
 export interface IAccountService {
 
@@ -7,7 +8,7 @@ export interface IAccountService {
   /*
   * Get profile information.
   * */
-  getProfile(): Promise<ProfileViewModel>;
+  getProfile(): Observable<ProfileViewModel>;
 
   //#endregion
 
