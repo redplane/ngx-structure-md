@@ -5,7 +5,7 @@ import {AuthorizeLayoutComponent} from "./authorize-layout/authorize-layout.comp
 import {NavigationBarComponent} from "./navigation-bar/navigation-bar.component";
 import {SideBarComponent} from "./side-bar/side-bar.component";
 import {RouterModule} from "@angular/router";
-import {MomentModule} from "angular2-moment";
+import {MomentModule} from 'ngx-moment';
 
 //#region Module declaration
 

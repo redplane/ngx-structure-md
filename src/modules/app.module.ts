@@ -5,7 +5,7 @@ import {IsAuthorizedGuard} from '../guards/is-authorized-guard';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ToastrModule} from 'ngx-toastr';
 import {FormsModule} from '@angular/forms';
-import {MomentModule} from 'angular2-moment';
+import {MomentModule} from 'ngx-moment';
 import {SharedModule} from './shared/shared.module';
 import {AppRouteModule} from './app.route';
 import {AppSettings} from '../constants/app-settings.constant';
