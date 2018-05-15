@@ -58,7 +58,17 @@ Online demo can be found [here](http://localhost:4200/#!/):
 ### Project commnands.
 - `ng serve`: Bundle and publish project files. Files which are generated will be placed inside `dist` folder.
 - `npm build --prod`: Bundle and start watching project. This is for development stage. Browser will be reloaded automatically when changes are detected.
-- 
+
+### Added plugins:
+- `ngx-translate`: For i18n translation in app. Please refer [its document](https://github.com/ngx-translate/core).
+- `ngx-moment`: Provides time calculation pipeline. Please refer [its document](https://github.com/urish/ngx-moment)
+- `font-awesome`: [Fonts system](https://fontawesome.com/?from=io).
+- `jquery-slimscroll`: [Slimscroll for website](https://github.com/rochal/jQuery-slimScroll).
+- `ngx-bootstrap`: [Bootstrap components for angular x](https://github.com/valor-software/ngx-bootstrap)
+- `admin-lte`: Free admin website template. Source: [adminlte.io](https://adminlte.io/themes/AdminLTE/index2.html)
+- `bootstrap 3`: [Responsive web design framework](http://getbootstrap.com/docs/3.3/).
+
+
 ### Bugs report.
 - While using this plugin, if you find any errors, please create issues at [project page](https://github.com/redplane/ngx-structure)
 
