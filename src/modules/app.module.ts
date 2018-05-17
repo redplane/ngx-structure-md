@@ -3,7 +3,6 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {IsAuthorizedGuard} from '../guards/is-authorized-guard';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {ToastrModule} from 'ngx-toastr';
 import {FormsModule} from '@angular/forms';
 import {MomentModule} from 'ngx-moment';
 import {SharedModule} from './shared/shared.module';
@@ -13,6 +12,8 @@ import {ServiceModule} from '../services/service.module';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {HttpLoaderFactory} from '../factories/ngx-translate.factory';
+import {ResolveModule} from '../resolves/resolve.module';
+import {GuardModule} from '../guards/guard.module';
 
 //#region Module declaration
 
@@ -22,7 +23,6 @@ import {HttpLoaderFactory} from '../factories/ngx-translate.factory';
     FormsModule,
     BrowserModule,
     BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot(), // ToastrModule added
     MomentModule,
     HttpClientModule,
     TranslateModule.forRoot({
@@ -32,13 +32,16 @@ import {HttpLoaderFactory} from '../factories/ngx-translate.factory';
         deps: [HttpClient]
       }
     }),
+
+    // Application modules.
+    GuardModule.forRoot(),
     ServiceModule.forRoot(),
+    ResolveModule.forRoot(),
     SharedModule,
     AppRouteModule
 
   ],
   providers: [
-    IsAuthorizedGuard,
     AppSettings
   ],
   bootstrap: [AppComponent]

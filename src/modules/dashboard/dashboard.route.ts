@@ -1,17 +1,22 @@
-import {RouterModule, Routes} from "@angular/router";
-import {NgModule} from "@angular/core";
-import {DashboardComponent} from "./dashboard.component";
-import {AuthorizeLayoutComponent} from "../shared/authorize-layout/authorize-layout.component";
-import {IsAuthorizedGuard} from "../../guards/is-authorized-guard";
+import {RouterModule, Routes} from '@angular/router';
+import {NgModule} from '@angular/core';
+import {DashboardComponent} from './dashboard.component';
+import {AuthorizeLayoutComponent} from '../shared/authorize-layout/authorize-layout.component';
+import {IsAuthorizedGuard} from '../../guards/is-authorized-guard';
+import {ProfileResolve} from '../../resolves/profile.resolve';
 
 //#region Route configuration
 
 const routes: Routes = [
   {
     path: '',
+    pathMatch: 'prefix',
     component: AuthorizeLayoutComponent,
     canActivate: [IsAuthorizedGuard],
-    data:{
+    resolve: {
+      profile: ProfileResolve
+    },
+    data: {
       appCssClasses: ['skin-blue-light', 'fixed', 'sidebar-mini', 'sidebar-mini-expand-feature']
     },
     children: [
@@ -30,7 +35,8 @@ const routes: Routes = [
 //#region Module configuration
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [
+    RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class DashboardRouteModule {
