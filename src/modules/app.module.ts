@@ -1,7 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {APP_INITIALIZER, NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
-import {IsAuthorizedGuard} from '../guards/is-authorized-guard';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import {MomentModule} from 'ngx-moment';
@@ -14,6 +13,15 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {HttpLoaderFactory} from '../factories/ngx-translate.factory';
 import {ResolveModule} from '../resolves/resolve.module';
 import {GuardModule} from '../guards/guard.module';
+import {AppConfigService} from '../services/app-config.service';
+
+//#region Factory functions
+
+export function appConfigServiceFactory(appConfigService: AppConfigService) {
+  return () => appConfigService.loadConfigurationFromFile();
+}
+
+//#endregion
 
 //#region Module declaration
 
@@ -42,7 +50,14 @@ import {GuardModule} from '../guards/guard.module';
 
   ],
   providers: [
-    AppSettings
+    AppSettings,
+    AppConfigService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: appConfigServiceFactory,
+      multi: true,
+      deps: [AppConfigService]
+    }
   ],
   bootstrap: [AppComponent]
 })
