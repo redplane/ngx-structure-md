@@ -1,5 +1,5 @@
 import {ProfileViewModel} from "../../view-models/profile.view-model";
-import {Observable} from "rxjs/Observable";
+import {Observable} from "rxjs";
 
 export interface IAccountService {
 

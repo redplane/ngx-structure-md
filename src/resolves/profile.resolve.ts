@@ -1,6 +1,6 @@
 import {ProfileViewModel} from '../view-models/profile.view-model';
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/router';
-import {Observable} from 'rxjs/Observable';
+import {Observable} from 'rxjs';
 import {Inject, Injectable} from '@angular/core';
 import {IAccountService} from '../interfaces/services/account-service.interface';
 

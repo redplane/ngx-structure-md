@@ -1,8 +1,10 @@
+
+import {mergeMap, map, filter} from 'rxjs/operators';
 import {Component, OnInit, Renderer2} from '@angular/core';
 import {ActivatedRoute, NavigationEnd, Router} from "@angular/router";
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/mergeMap';
+
+
+
 
 @Component({
   selector: 'body',
@@ -31,15 +33,15 @@ export class AppComponent implements OnInit {
   public ngOnInit(): void {
 
     // Register to router events to set application layout.
-    this.router.events
-      .filter((event) => event instanceof NavigationEnd)
-      .map(() => this.activatedRoute)
-      .map((route) => {
+    this.router.events.pipe(
+      filter((event) => event instanceof NavigationEnd),
+      map(() => this.activatedRoute),
+      map((route) => {
         while (route.firstChild) route = route.firstChild;
         return route;
-      })
-      .filter((route) => route.outlet === 'primary')
-      .mergeMap((route) => route.data)
+      }),
+      filter((route) => route.outlet === 'primary'),
+      mergeMap((route) => route.data),)
       .subscribe((event) => {
         let classes = event.appCssClasses;
 
