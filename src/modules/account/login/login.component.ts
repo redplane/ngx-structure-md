@@ -16,7 +16,7 @@ export class LoginComponent {
   /*
   * Model for 2-way data binding.
   * */
-  private model: LoginViewModel;
+  public model: LoginViewModel;
 
   /*
   * Whether component is busy or not.

@@ -21,7 +21,6 @@
                placeholder="Email"
                autofocus="true"
                [(ngModel)]="model.email"
-               [readonly]="isBusy"
 
                required="required"
                maxlength="128"
@@ -45,7 +44,6 @@
                type="password"
                class="form-control"
                placeholder="Password"
-               [readonly]="isBusy"
                [(ngModel)]="model.password"
 
                required="required"
@@ -67,7 +65,7 @@
         <div class="col-xs-12">
           <input type="submit"
                  class="btn btn-primary btn-block btn-flat"
-                 [disabled]="!loginPanel.valid || bIsBusy"
+                 [disabled]="!loginPanel.valid"
                  value="Sign In">
         </div>
       </div>

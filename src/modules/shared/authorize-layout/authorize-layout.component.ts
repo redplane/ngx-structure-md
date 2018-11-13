@@ -14,7 +14,7 @@ export class AuthorizeLayoutComponent implements OnInit{
   /*
   * Profile information.
   * */
-  private profile: ProfileViewModel;
+  public profile: ProfileViewModel;
 
   //#endregion
 
