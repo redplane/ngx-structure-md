@@ -10,7 +10,7 @@ Description:
 * Angular CLI:
     * 1.7.4
     
-Online demo can be found [here](http://localhost:4200/#!/):
+Online demo can be found [here](https://ngx-structure.netlify.com):
 
 #### Project structure.
 ```

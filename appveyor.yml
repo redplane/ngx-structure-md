@@ -17,7 +17,7 @@ install:
  - npm install
  
 build_script: 
- - ng build
+ - ng build --prod
 
 after_build:
  - set NETLIFY_SITE_ID=%NETLIFY_SITE_ID%
