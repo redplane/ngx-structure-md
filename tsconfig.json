@@ -4,6 +4,7 @@
     "enableIvy": false
   },
   "compilerOptions": {
+    "importHelpers": true,
     "outDir": "./dist/out-tsc",
     "sourceMap": false,
     "declaration": false,
