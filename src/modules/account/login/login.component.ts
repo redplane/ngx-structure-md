@@ -1,6 +1,6 @@
 import {Component, Inject, ViewChild} from "@angular/core";
 import {LoginViewModel} from "../../../view-models/login.view-model";
-import {IAuthenticationService} from "../../../interfaces/services/authentication-service.interface";
+import {IAuthenticationService} from "../../../services/interfaces/authentication-service.interface";
 import {AuthorizationToken} from "../../../models/authorization-token";
 import {Router} from "@angular/router";
 

@@ -13,7 +13,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {HttpLoaderFactory} from '../factories/ngx-translate.factory';
 import {ResolveModule} from '../resolves/resolve.module';
 import {GuardModule} from '../guards/guard.module';
-import {AppConfigService} from '../services/app-config.service';
+import {AppConfigService} from '../services/implementations/app-config.service';
 
 //#region Factory functions
 

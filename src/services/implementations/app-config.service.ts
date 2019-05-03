@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {AppConfig} from '../models/app-config';
+import {AppConfig} from '../../models/app-config';
 
 @Injectable()
 export class AppConfigService {

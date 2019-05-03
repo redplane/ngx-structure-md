@@ -1,6 +1,6 @@
 import {Component, Inject, Input} from '@angular/core';
 import {Router} from "@angular/router";
-import {IAuthenticationService} from "../../../interfaces/services/authentication-service.interface";
+import {IAuthenticationService} from "../../../services/interfaces/authentication-service.interface";
 import {ProfileViewModel} from "../../../view-models/profile.view-model";
 
 @Component({

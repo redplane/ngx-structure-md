@@ -2,10 +2,10 @@
  * Created by Linh Nguyen on 6/7/2017.
  */
 import {Injectable} from "@angular/core";
-import {AuthorizationToken} from "../models/authorization-token";
+import {AuthorizationToken} from "../../models/authorization-token";
 import {Router} from "@angular/router";
-import {IAuthenticationService} from "../interfaces/services/authentication-service.interface";
-import {AppSettings} from "../constants/app-settings.constant";
+import {IAuthenticationService} from "../interfaces/authentication-service.interface";
+import {AppSettings} from "../../constants/app-settings.constant";
 
 @Injectable()
 export class AuthenticationService implements IAuthenticationService {

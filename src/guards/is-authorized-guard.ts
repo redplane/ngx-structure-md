@@ -3,7 +3,7 @@
  */
 import {Inject, Injectable} from "@angular/core";
 import {CanActivate, Router} from "@angular/router";
-import {IAuthenticationService} from "../interfaces/services/authentication-service.interface";
+import {IAuthenticationService} from "../services/interfaces/authentication-service.interface";
 
 @Injectable()
 export class IsAuthorizedGuard implements CanActivate {

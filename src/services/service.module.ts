@@ -1,8 +1,9 @@
 import {NgModule, ModuleWithProviders} from '@angular/core';
-import {IAccountService} from '../interfaces/services/account-service.interface';
-import {AccountService} from './account.service';
-import {IAuthenticationService} from '../interfaces/services/authentication-service.interface';
-import {AuthenticationService} from './authentication.service';
+import {IAccountService} from './interfaces/account-service.interface';
+import {AccountService} from './implementations/account.service';
+import {IAuthenticationService} from './interfaces/authentication-service.interface';
+import {AuthenticationService} from './implementations/authentication.service';
+import {MessageBusService} from './implementations/message-bus.service';
 
 @NgModule({})
 
@@ -15,7 +16,8 @@ export class ServiceModule {
       ngModule: ServiceModule,
       providers: [
         {provide: 'IAccountService', useClass: AccountService},
-        {provide: 'IAuthenticationService', useClass: AuthenticationService}
+        {provide: 'IAuthenticationService', useClass: AuthenticationService},
+        {provide: 'IMessageBusService', useClass: MessageBusService}
       ]
     };
   }

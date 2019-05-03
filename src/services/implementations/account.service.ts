@@ -1,9 +1,9 @@
 
 import {of as observableOf, Observable} from 'rxjs';
-import {IAccountService} from "../interfaces/services/account-service.interface";
+import {IAccountService} from "../interfaces/account-service.interface";
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
-import {ProfileViewModel} from "../view-models/profile.view-model";
+import {ProfileViewModel} from "../../view-models/profile.view-model";
 
 @Injectable()
 export class AccountService implements IAccountService {
