@@ -1,6 +1,6 @@
-import {RouterModule, Routes} from "@angular/router";
-import {NgModule} from "@angular/core";
-import {LoginComponent} from "./login/login.component";
+import {RouterModule, Routes} from '@angular/router';
+import {NgModule} from '@angular/core';
+import {LoginComponent} from '../login/login.component';
 
 //#region Route configuration
 
@@ -22,7 +22,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 
-export class AccountRouteModule {
+export class UserRouteModule {
 }
 
 //#endregion

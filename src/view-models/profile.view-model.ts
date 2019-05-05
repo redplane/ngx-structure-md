@@ -3,7 +3,7 @@ export class ProfileViewModel{
   //#region Properties
 
   /*
-  * Nickname of account.
+  * Nickname of user.
   * */
   public nickname: string;
 
@@ -13,12 +13,12 @@ export class ProfileViewModel{
   public photoRelativeUrl: string;
 
   /*
-  * When account joined into system.
+  * When user joined into system.
   * */
   public joinedTime: number;
 
   /*
-  * Email of account.
+  * Email of user.
   * */
   public email: string;
 

@@ -1,8 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
-import {LoginComponent} from "./login/login.component";
-import {AccountRouteModule} from "./account.route";
+import {LoginComponent} from '../login/login.component';
 
 
 //#region Module declaration
@@ -10,8 +9,7 @@ import {AccountRouteModule} from "./account.route";
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
-    AccountRouteModule
+    FormsModule
   ],
   declarations: [
     LoginComponent
@@ -21,7 +19,7 @@ import {AccountRouteModule} from "./account.route";
   ]
 })
 
-export class AccountModule {
+export class UserModule {
 }
 
 //#endregion
